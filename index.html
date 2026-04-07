@@ -5,11 +5,845 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sanket Shah | Advocate &amp; Technology Lawyer</title>
 <meta name="description" content="Adv. Sanket Shah is a Technology Lawyer and Enrolled Advocate specialising in GDPR, DPDPA compliance, contract lifecycle management, and AI governance. LL.M. Gold Medalist, published author, and builder of Privacipher.">
+<meta name="keywords" content="Sanket Shah, Technology Lawyer, Data Privacy Lawyer, DPDPA, GDPR, Contract Lifecycle Management, AI Governance, Indore, India">
+<meta name="author" content="Adv. Sanket Shah">
 <link rel="canonical" href="https://advsanketshah.github.io/portfolio/">
-<link rel="stylesheet" href="style.css">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sanket Shah | Advocate &amp; Technology Lawyer">
+<meta property="og:description" content="Technology Lawyer specialising in GDPR, DPDPA, CLM, and AI governance. LL.M. Gold Medalist. Published author. Builder of Privacipher.">
+<meta property="og:url" content="https://advsanketshah.github.io/portfolio/">
+<meta property="og:image" content="https://advsanketshah.github.io/portfolio/sanket-photo.JPG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sanket Shah | Advocate &amp; Technology Lawyer">
+<meta name="twitter:description" content="Technology Lawyer specialising in GDPR, DPDPA, CLM, and AI governance. LL.M. Gold Medalist. Published author.">
+<meta name="twitter:image" content="https://advsanketshah.github.io/portfolio/sanket-photo.JPG">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Syne:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #090a0f;
+    --bg-card: #12141d;
+    --bg-card-hover: #181b26;
+    --cream: #F8F5F0;
+    --cream-muted: #A3A3A3;
+    --gold: #D4AF37;
+    --gold-light: #F3E5AB;
+    --gold-dim: rgba(212, 175, 55, 0.1);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-gold: rgba(212, 175, 55, 0.3);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-ui: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --transition: 0.3s ease;
+    --radius: 12px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* MODERN PILL NAV */
+  nav {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    background: rgba(18, 20, 29, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cream-muted);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--gold);
+    text-decoration: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 100px;
+    transition: all var(--transition);
+  }
+
+  .nav-cta:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  /* HEADERS */
+  .section-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .section-label {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 400;
+    color: var(--cream);
+  }
+
+  /* HERO SECTION */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 5% 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  @media (min-width: 900px) {
+    .hero-inner { grid-template-columns: 1.2fr 0.8fr; }
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-title {
+    font-family: var(--font-ui);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 400;
+    color: var(--cream-muted);
+    margin-bottom: 2rem;
+  }
+
+  .hero-statement {
+    font-size: 1.1rem;
+    color: var(--cream);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* BUTTONS */
+  .btn-primary, .btn-secondary {
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: all var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-primary { background: var(--gold); color: var(--bg); }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); }
+  .btn-secondary { background: var(--bg-card); color: var(--cream); border: 1px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); }
+
+  /* HERO IMAGE */
+  .hero-photo-ring {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4/5;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--gold), transparent 60%, var(--gold));
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+
+  .hero-photo-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(var(--radius) - 2px);
+    overflow: hidden;
+    background: var(--bg-card);
+  }
+
+  .hero-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* STATS BAR */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .stat-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform var(--transition);
+  }
+  
+  .stat-item:hover {
+    border-color: var(--border-gold);
+    transform: translateY(-5px);
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cream-muted);
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  /* SECTIONS SPACING */
+  section {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* STRICT GRIDS FOR BOXES */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* VISIBLE BOX STYLING */
+  .box-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    transition: all var(--transition);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+
+  .box-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  /* VALUE CARDS */
+  .value-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: var(--gold);
+  }
+
+  .value-card-title {
+    font-family: var(--font-ui);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+  }
+
+  .value-text {
+    font-size: 0.95rem;
+    color: var(--cream-muted);
+    line-height: 1.6;
+  }
+
+  /* TOOL SECTION */
+  .tool-showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .tool-showcase { grid-template-columns: 1fr 1fr; }
+  }
+
+  .tool-tag {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--gold);
+    padding: 0.35rem 0.85rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .tool-name {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--cream);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .tool-description {
+    color: var(--cream-muted);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .tool-features {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .tool-features li {
+    font-size: 0.95rem;
+    color: var(--cream-muted);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .tool-features li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: bold;
+  }
+
+  .tool-mockup {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .tool-mockup-bar {
+    background: rgba(255,255,255,0.02);
+    border-bottom: 1px solid var(--border);
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mockup-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .mockup-url {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.35rem 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--cream-muted);
+    margin-left: 0.5rem;
+  }
+
+  .tool-mockup-body { padding: 2.5rem; }
+  .mockup-heading {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .mockup-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .mockup-chip {
+    font-size: 0.7rem;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--cream-muted);
+  }
+
+  .mockup-chip.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: var(--gold-dim);
+  }
+
+  .mockup-result-bar {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .mockup-result-label {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .mockup-result-track {
+    height: 8px;
+    background: var(--bg);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .mockup-result-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  }
+
+  /* BOOKS SECTION */
+  .book-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-decoration: none;
+    padding: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .book-card { flex-direction: row; align-items: flex-start; }
+  }
+
+  .book-spine {
+    width: 100px;
+    height: 140px;
+    background: #111;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.5);
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .book-spine-text {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    color: var(--gold);
+    line-height: 1.3;
+  }
+
+  .book-genre {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .book-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+  .book-description {
+    font-size: 0.95rem;
+    color: var(--cream-muted);
+    line-height: 1.6;
+  }
+
+  /* EXPERIENCE TIMELINE */
+  .experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .timeline-item { grid-template-columns: 250px 1fr; gap: 3rem; }
+  }
+
+  .timeline-period {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    background: var(--gold-dim);
+    padding: 0.35rem 0.85rem;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .timeline-org {
+    font-size: 0.95rem;
+    color: var(--cream-muted);
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .timeline-role {
+    font-family: var(--font-ui);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+
+  .timeline-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .timeline-points li {
+    font-size: 0.95rem;
+    color: var(--cream-muted);
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .timeline-points li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 1.2rem;
+  }
+
+  /* CERTIFICATIONS */
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cert-issuer {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .cert-name {
+    font-size: 1.05rem;
+    color: var(--cream);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .cert-date {
+    font-size: 0.85rem;
+    color: var(--cream-muted);
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-card {
+    padding: 3rem;
+    position: relative;
+  }
+
+  .testimonial-text {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+
+  .testimonial-avatar {
+    width: 45px;
+    height: 45px;
+    background: var(--gold-dim);
+    border: 1px solid var(--border-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-family: var(--font-ui);
+    font-weight: bold;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .testimonial-name {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    color: var(--cream);
+    font-weight: 600;
+  }
+
+  .testimonial-role {
+    font-size: 0.85rem;
+    color: var(--cream-muted);
+  }
+
+  /* EDUCATION */
+  .edu-degree {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .edu-institution {
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 3rem 5%;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--bg);
+  }
+
+  @media (min-width: 768px) {
+    footer { flex-direction: row; justify-content: space-between; }
+  }
+
+  footer p, .footer-links a {
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    color: var(--cream-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  /* MOBILE NAV & HAMBURGER */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: var(--cream);
+    transition: 0.3s;
+  }
+
+  @media (max-width: 900px) {
+    nav { top: 1rem; padding: 0.8rem 1.5rem; width: 95%; }
+    .hamburger { display: flex; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      right: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-direction: column;
+      padding: 2rem;
+      text-align: center;
+    }
+    .nav-links.open { display: flex; }
+    .nav-cta { display: none; }
+  }
+
+  /* ANIMATIONS */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition);
+    z-index: 99;
+    color: var(--bg);
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  .back-to-top.visible { opacity: 1; visibility: visible; }
+  .back-to-top:hover { background: var(--gold-light); transform: translateY(-5px); }
+
+</style>
 </head>
 <body>
 
@@ -24,7 +858,7 @@
     <li><a href="#testimonials" onclick="closeMenu()">Testimonials</a></li>
   </ul>
   <div class="nav-right">
-    <a href="#contact" class="nav-cta" onclick="closeMenu()">Book Consultation</a>
+    <a href="mailto:advocatesanketshah@gmail.com" class="nav-cta">Book Consultation</a>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
@@ -33,7 +867,7 @@
 
 <section id="hero">
   <div class="hero-inner">
-    <div class="hero-text-area">
+    <div class="hero-text-area fade-up">
       <div class="hero-eyebrow">Advocate &amp; Technology Lawyer, Indore, India</div>
       <h1 class="hero-name">Sanket <em>Shah</em></h1>
       <p class="hero-title">LL.M., IPR &amp; Technology Law &middot; Gold Medalist &middot; Bar Council of India</p>
@@ -41,12 +875,11 @@
         Enrolled Advocate with an LL.M. from Jindal Global Law School (Gold Medalist in Data Privacy) and over three years of experience drafting and negotiating SaaS agreements, MSAs, and vendor contracts for IT and healthcare clients. Specialises in GDPR and DPDPA compliance, legal operations, and AI-driven workflow automation. Published author of three books and the builder of Privacipher, a live multi-jurisdiction compliance tool covering DPDPA, GDPR, and CCPA. Open to relocation.
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Book Consultation</a>
+        <a href="mailto:advocatesanketshah@gmail.com" class="btn-primary">Book Consultation</a>
         <a href="https://linkedin.com/in/advsanketshah" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
-        <a href="Sanket_Shah_Resume.pdf" class="btn-secondary" download>Download CV</a>
       </div>
     </div>
-    <div class="hero-photo-cell">
+    <div class="hero-photo-cell fade-up" style="transition-delay: 0.2s;">
       <div class="hero-photo-ring">
         <div class="hero-photo-inner">
           <img src="sanket-photo.JPG" alt="Adv. Sanket Shah" class="hero-photo-img">
@@ -55,7 +888,7 @@
     </div>
   </div>
 
-  <div class="stats-bar fade-up">
+  <div class="stats-bar fade-up" style="transition-delay: 0.4s;">
     <div class="stat-item">
       <span class="stat-number">3+</span>
       <span class="stat-label">Years in Tech Law</span>
@@ -83,38 +916,37 @@
   <div class="section-header fade-up">
     <span class="section-label">01</span>
     <h2 class="section-title">What I Bring</h2>
-    <div class="section-divider"></div>
   </div>
 
   <div class="grid-3">
     <div class="box-card fade-up">
       <span class="value-icon">⚖</span>
-      <p class="value-card-title">Contract Lifecycle Management</p>
+      <h3 class="value-card-title">Contract Lifecycle Management</h3>
       <p class="value-text">End-to-end drafting, review, and negotiation of SaaS agreements, MSAs, NDAs, and vendor contracts, with a risk allocation lens rather than a checkbox mentality.</p>
     </div>
     <div class="box-card fade-up">
       <span class="value-icon">🛡</span>
-      <p class="value-card-title">Data Privacy &amp; Compliance</p>
+      <h3 class="value-card-title">Data Privacy &amp; Compliance</h3>
       <p class="value-text">DPDPA and GDPR compliance frameworks built from primary texts, not templates. Data flow mapping, DPIAs, vendor structuring. And a Gold Medal in Data Privacy to back it up.</p>
     </div>
     <div class="box-card fade-up">
       <span class="value-icon">⚙</span>
-      <p class="value-card-title">Legal Automation &amp; AI Governance</p>
+      <h3 class="value-card-title">Legal Automation &amp; AI Governance</h3>
       <p class="value-text">I don't just advise on AI. I build with it. Designed AI-driven legal evaluation logic at LawSikho. Built a live multi-jurisdiction compliance checker deployed on GitHub Pages.</p>
     </div>
     <div class="box-card fade-up">
       <span class="value-icon">📖</span>
-      <p class="value-card-title">Thought Leadership</p>
+      <h3 class="value-card-title">Thought Leadership</h3>
       <p class="value-text">Published author of two books. Active LinkedIn voice on AI law and data privacy. Running the Privacipher newsletter on AI compliance. Not a passive observer of the field.</p>
     </div>
     <div class="box-card fade-up">
       <span class="value-icon">🏛</span>
-      <p class="value-card-title">Academic &amp; Research Depth</p>
+      <h3 class="value-card-title">Academic &amp; Research Depth</h3>
       <p class="value-text">Jean Monnet EU-ERASMUS+ researcher on non-personal data governance. Arbitrator at Vis Vienna. President Judge at Jessup Indian Prelims. Published in peer-reviewed journals.</p>
     </div>
     <div class="box-card fade-up">
       <span class="value-icon">🌐</span>
-      <p class="value-card-title">Cross-Jurisdiction Fluency</p>
+      <h3 class="value-card-title">Cross-Jurisdiction Fluency</h3>
       <p class="value-text">Practical experience spanning Indian, EU, and US legal frameworks: DPDPA, GDPR, and CCPA. Not just comparative knowledge; applied to real client mandates.</p>
     </div>
   </div>
@@ -124,14 +956,13 @@
   <div class="section-header fade-up">
     <span class="section-label">02</span>
     <h2 class="section-title">What I've Built</h2>
-    <div class="section-divider"></div>
   </div>
 
   <div class="tool-showcase">
     <div class="fade-up">
       <span class="tool-tag">Live on GitHub Pages</span>
       <h3 class="tool-name">Global Privacy Compliance Intelligence Tool</h3>
-      <p class="tool-desc">
+      <p class="tool-description">
         A browser-based, zero-backend compliance checker covering DPDPA 2023, GDPR, and CCPA, fact-checked against official Gazette texts. Built entirely in HTML, CSS, and JavaScript. No dependency on external APIs. No login wall.
       </p>
       <ul class="tool-features">
@@ -176,40 +1007,39 @@
   <div class="section-header fade-up">
     <span class="section-label">03</span>
     <h2 class="section-title">Published Works</h2>
-    <div class="section-divider"></div>
   </div>
 
   <div class="grid-2">
     <a href="https://amzn.in/d/08QqoULj" target="_blank" rel="noopener" class="box-card book-card fade-up">
-      <div class="book-spine book-spine-1">
+      <div class="book-spine">
         <span class="book-spine-text">Privacy Starter Guide</span>
       </div>
-      <div class="book-info">
+      <div>
         <p class="book-genre">Legal Reference &middot; Amazon Kindle</p>
-        <p class="book-title">The Privacy Lawyer's Starter Guide: GDPR and India's DPDPA in Practice</p>
-        <p class="book-desc">A working guide for lawyers advising on GDPR and DPDPA in parallel, because clients operate across jurisdictions. Covers regulatory landscape, substantive law, and practice directly, with twelve fully drafted instruments included.</p>
+        <h3 class="book-title">The Privacy Lawyer's Starter Guide: GDPR and India's DPDPA in Practice</h3>
+        <p class="book-description">A working guide for lawyers advising on GDPR and DPDPA in parallel, because clients operate across jurisdictions. Covers regulatory landscape, substantive law, and practice directly, with twelve fully drafted instruments included.</p>
       </div>
     </a>
 
     <a href="https://amzn.in/d/0deyErKE" target="_blank" rel="noopener" class="box-card book-card fade-up">
-      <div class="book-spine book-spine-1">
+      <div class="book-spine">
         <span class="book-spine-text">DPDPA Guide</span>
       </div>
-      <div class="book-info">
+      <div>
         <p class="book-genre">Legal Reference &middot; Amazon Kindle</p>
-        <p class="book-title">Lawyer's Guide to DPDPA: From Black Letter Law to Boardroom Advice</p>
-        <p class="book-desc">Practical legal architecture for DPDPA 2023 compliance, written for advocates and in-house counsel who need to translate the statute into operational guidance without secondary-source padding.</p>
+        <h3 class="book-title">Lawyer's Guide to DPDPA: From Black Letter Law to Boardroom Advice</h3>
+        <p class="book-description">Practical legal architecture for DPDPA 2023 compliance, written for advocates and in-house counsel who need to translate the statute into operational guidance without secondary-source padding.</p>
       </div>
     </a>
 
     <a href="https://amzn.in/d/0gEye9in" target="_blank" rel="noopener" class="box-card book-card fade-up">
-      <div class="book-spine book-spine-2">
+      <div class="book-spine">
         <span class="book-spine-text">Sunday Afternoons</span>
       </div>
-      <div class="book-info">
+      <div>
         <p class="book-genre">Literary Fiction &middot; Amazon Kindle</p>
-        <p class="book-title">The Weight of Sunday Afternoons</p>
-        <p class="book-desc">A quiet, Mumbai-set novel about the weight of what remains unsaid between people who've shared too much of the same ordinary time. The other half of who I am outside the law.</p>
+        <h3 class="book-title">The Weight of Sunday Afternoons</h3>
+        <p class="book-description">A quiet, Mumbai-set novel about the weight of what remains unsaid between people who've shared too much of the same ordinary time. The other half of who I am outside the law.</p>
       </div>
     </a>
   </div>
@@ -219,7 +1049,6 @@
   <div class="section-header fade-up">
     <span class="section-label">04</span>
     <h2 class="section-title">Experience</h2>
-    <div class="section-divider"></div>
   </div>
 
   <div class="experience-timeline">
@@ -264,13 +1093,13 @@
         <p class="timeline-org">MoreYeahs IT Technologies &middot; Indore, India</p>
       </div>
       <div class="timeline-content">
-        <p class="timeline-role">Legal Consultant, Retainer <span style="font-weight:400; color: var(--cream-muted); font-size: 0.8rem;">(Jul 2023 to Jan 2024)</span></p>
+        <p class="timeline-role">Legal Consultant, Retainer <span style="font-weight:400; color: var(--cream-muted); font-size: 0.85rem;">(Jul 2023 to Jan 2024)</span></p>
         <ul class="timeline-points" style="margin-bottom: 1.5rem;">
           <li>Delivered expert data protection advisory and compliance frameworks under Indian and international privacy laws</li>
           <li>Drafted and implemented corporate policies, vendor agreements, and legal compliance strategies tailored to the client's operational needs</li>
           <li>Provided comprehensive paralegal services supporting end-to-end legal operations</li>
         </ul>
-        <p class="timeline-role">Legal Intern <span style="font-weight:400; color: var(--cream-muted); font-size: 0.8rem;">(Feb 2023 to Jun 2023)</span></p>
+        <p class="timeline-role">Legal Intern <span style="font-weight:400; color: var(--cream-muted); font-size: 0.85rem;">(Feb 2023 to Jun 2023)</span></p>
         <ul class="timeline-points">
           <li>Gained hands-on experience in technology law working across data protection, IP, and e-commerce regulatory frameworks</li>
           <li>Assisted in drafting and reviewing contracts, license agreements, and legal documents; supported ongoing legal cases</li>
@@ -391,10 +1220,9 @@
   <div class="section-header fade-up">
     <span class="section-label">05</span>
     <h2 class="section-title">Certifications</h2>
-    <div class="section-divider"></div>
   </div>
 
-  <div class="grid-3">
+  <div class="certs-grid">
     <div class="box-card fade-up">
       <p class="cert-issuer">University of Pennsylvania</p>
       <p class="cert-name">AI For Business</p>
@@ -462,7 +1290,6 @@
   <div class="section-header fade-up">
     <span class="section-label">06</span>
     <h2 class="section-title">What People Say</h2>
-    <div class="section-divider"></div>
   </div>
 
   <div class="grid-3">
@@ -506,54 +1333,21 @@
   <div class="section-header fade-up">
     <span class="section-label">07</span>
     <h2 class="section-title">Education</h2>
-    <div class="section-divider"></div>
   </div>
 
   <div class="grid-2">
     <div class="box-card fade-up">
-      <p class="edu-degree">Master of Laws (LL.M.) in IPR &amp; Technology Law</p>
+      <h3 class="edu-degree">Master of Laws (LL.M.) in IPR &amp; Technology Law</h3>
       <p class="edu-institution">Jindal Global Law School, O.P. Jindal Global University</p>
       <p class="edu-meta">2022 to 2023 &middot; Score: 81.25%<br>Specialization: Data Protection, AI Law, IP Rights</p>
       <span class="edu-achievement">Gold Medalist in Data Privacy</span>
     </div>
     <div class="box-card fade-up">
-      <p class="edu-degree">BBA LLB (Hons.)</p>
+      <h3 class="edu-degree">BBA LLB (Hons.)</h3>
       <p class="edu-institution">Prestige Institute of Management &amp; Research, Indore</p>
       <p class="edu-meta">2017 to 2022 &middot; Score: 86.7%<br>Convener, Journal of Law &amp; Ethics (2022)</p>
       <span class="edu-achievement">Gold Medalist</span>
     </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="section-header fade-up">
-    <span class="section-label">08</span>
-    <h2 class="section-title">Let's Connect</h2>
-    <div class="section-divider"></div>
-  </div>
-  
-  <div class="grid-2">
-    <div class="fade-up" style="display: flex; flex-direction: column; justify-content: center;">
-      <p class="contact-statement" style="text-align: left; margin-left: 0;">
-        If you're looking for someone who operates at the edge of law and technology, and can build as well as advise, I'd like to hear from you.
-      </p>
-      <div class="contact-links" style="justify-content: flex-start; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
-        <a href="mailto:advocatesanketshah@gmail.com" class="contact-link">
-          <span style="font-size: 1.2rem;">✉</span> advocatesanketshah@gmail.com
-        </a>
-        <a href="https://linkedin.com/in/advsanketshah" target="_blank" rel="noopener" class="contact-link">
-          <span style="font-size: 1.2rem;">in</span> linkedin.com/in/advsanketshah
-        </a>
-        <a href="tel:+919617340562" class="contact-link">
-          <span style="font-size: 1.2rem;">✆</span> +91 96173 40562
-        </a>
-      </div>
-    </div>
-    
-    <div class="box-card fade-up" style="padding: 1rem; overflow: hidden; height: 600px;">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/advsanketshah/consultation?hide_gdpr_banner=1&background_color=141422&text_color=F2EDE4&primary_color=C8963E" style="min-width:320px;height:100%;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      </div>
   </div>
 </section>
 
