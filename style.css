@@ -17,7 +17,7 @@
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-ui: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 html { scroll-behavior: smooth; }
@@ -42,9 +42,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 3rem;
-  background: rgba(8, 8, 14, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(8, 8, 14, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
@@ -168,12 +168,16 @@ nav {
   margin-bottom: 0.25rem;
   word-break: normal;
   hyphens: none;
+  background: linear-gradient(to right, var(--cream), var(--cream-muted));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-name em {
   font-style: italic;
   color: var(--gold);
   font-weight: 300;
+  -webkit-text-fill-color: var(--gold);
 }
 
 .hero-title {
@@ -442,7 +446,7 @@ section:nth-child(even) { background: var(--bg-surface); }
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  transition: padding-left var(--transition);
+  transition: padding-left var(--transition), color var(--transition);
 }
 
 .tool-features li:hover {
@@ -742,7 +746,7 @@ section:nth-child(even) { background: var(--bg-surface); }
 .timeline-item:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-gold);
-  transform: translateX(10px);
+  transform: translateX(8px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
@@ -756,7 +760,7 @@ section:nth-child(even) { background: var(--bg-surface); }
   text-transform: uppercase;
   background: var(--gold-dim);
   display: inline-block;
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 4px;
 }
 
