@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Book | Sanket Shah</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Syne:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Adv. Sanket Shah</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resume.html">Experience &amp; Skills</a></li>
+    <li><a href="contact.html" class="active">Contact &amp; Book</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="contact.html" class="nav-cta">Book Consultation</a>
+  </div>
+</nav>
+
+<header class="page-header fade-up">
+  <p class="page-subtitle">Let's Connect</p>
+  <h1 class="page-title">Start a Conversation</h1>
+  <p style="color: var(--cream-muted); max-width: 600px; margin: 0 auto;">If you are looking for legal architecture that operates at the edge of law and technology, book a consultation below.</p>
+</header>
+
+<section id="booking-section">
+  <div class="contact-grid">
+    
+    <div class="contact-left fade-up">
+      <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--cream); margin-bottom: 2rem;">Direct Access</h3>
+      <div class="contact-info">
+        <a href="mailto:advocatesanketshah@gmail.com">Email: advocatesanketshah@gmail.com</a>
+        <a href="https://linkedin.com/in/advsanketshah" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a href="tel:+919617340562">Phone: +91 96173 40562</a>
+        <a href="Sanket_Shah_Resume.pdf" download style="color: var(--gold); text-decoration: underline; margin-top: 2rem;">Download Full CV (PDF)</a>
+      </div>
+
+      <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--cream); margin-top: 4rem; margin-bottom: 1.5rem;">What People Say</h3>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"What stood out about Sanket was his curiosity and genuine initiative in understanding how AI could be applied practically. He approached every responsibility with sincerity and consistency."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">KM</div>
+            <div>
+              <p class="testimonial-name">Kantika Mukherjee</p>
+              <p class="testimonial-role">Deputy Director, LawSikho</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Sanket delivered high-quality work consistently and on time throughout his studies. He is not only analytically sharp but genuinely committed to using law as a tool for good."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DS</div>
+            <div>
+              <p class="testimonial-name">Dr. Deepa Shrivastava</p>
+              <p class="testimonial-role">HOD, PIMR</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right fade-up">
+      <div class="calendly-wrapper">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/advsanketshah/consultation?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Adv. Sanket Shah</p>
+  <ul class="footer-links">
+    <li><a href="https://linkedin.com/in/advsanketshah" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:advocatesanketshah@gmail.com">Email</a></li>
+  </ul>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
