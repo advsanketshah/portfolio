@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sanket Shah | Advocate &amp; Technology Lawyer</title>
-<meta name="description" content="Adv. Sanket Shah is a Technology Lawyer and Enrolled Advocate specialising in GDPR, DPDPA compliance, contract lifecycle management, and AI governance.">
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Syne:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
@@ -13,81 +12,139 @@
 <nav>
   <a href="index.html" class="nav-logo">Adv. Sanket Shah</a>
   <ul class="nav-links" id="nav-links">
-    <li><a href="index.html" class="active">Overview</a></li>
-    <li><a href="resume.html">Experience</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="resume.html">Experience &amp; Skills</a></li>
+    <li><a href="contact.html">Contact &amp; Book</a></li>
   </ul>
-  <div style="display: flex; align-items: center; gap: 1rem;">
+  <div style="display: flex; align-items: center; gap: 1.5rem;">
     <a href="contact.html" class="nav-cta">Book Consultation</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" id="hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<main class="hero-wrapper">
-  <div class="hero-text-area fade-up">
-    <div class="hero-eyebrow">Advocate &amp; Technology Lawyer</div>
-    <h1 class="hero-name">Sanket <em>Shah</em></h1>
-    <p class="hero-title">LL.M. Gold Medalist &middot; Bar Council of India</p>
-    <p class="hero-statement">
-      Enrolled Advocate specialising in GDPR and DPDPA compliance, legal operations, and AI-driven workflow automation. I build robust data protection frameworks and manage complex commercial contracts for IT and healthcare clients.
-    </p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn-primary">Book Consultation</a>
-      <a href="resume.html" class="btn-secondary">View My Work</a>
+<section id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Advocate &amp; Technology Lawyer, Indore, India</div>
+      <h1 class="hero-name">Sanket <em>Shah</em></h1>
+      <p class="hero-title">LL.M., IPR &amp; Technology Law &middot; Gold Medalist &middot; Bar Council of India</p>
+      <p class="hero-statement">
+        Enrolled Advocate with an LL.M. from Jindal Global Law School (Gold Medalist in Data Privacy) and over three years of experience drafting and negotiating SaaS agreements, MSAs, and vendor contracts for IT and healthcare clients. Specialises in GDPR and DPDPA compliance, legal operations, and AI-driven workflow automation. Published author of three books and the builder of Privacipher, a live multi-jurisdiction compliance tool covering DPDPA, GDPR, and CCPA. Open to relocation.
+      </p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Book Consultation</a>
+        <a href="resume.html" class="btn-secondary">View Resume</a>
+      </div>
+    </div>
+    <div class="hero-photo-ring">
+      <div class="hero-photo-inner">
+        <img src="sanket-photo.JPG" alt="Adv. Sanket Shah" class="hero-photo-img">
+      </div>
     </div>
   </div>
-  
-  <div class="hero-image-wrapper fade-up">
-    <img src="./sanket-photo.JPG" alt="Advocate Sanket Shah" class="hero-image">
+
+  <div class="stats-bar fade-up">
+    <div class="stat-item"><span class="stat-number">3+</span><span class="stat-label">Years in Tech Law</span></div>
+    <div class="stat-item"><span class="stat-number">3</span><span class="stat-label">Books Published</span></div>
+    <div class="stat-item"><span class="stat-number">12</span><span class="stat-label">Certifications</span></div>
+    <div class="stat-item"><span class="stat-number">6.2K+</span><span class="stat-label">LinkedIn Followers</span></div>
+    <div class="stat-item"><span class="stat-number">1</span><span class="stat-label">Live Legal Tool</span></div>
   </div>
-</main>
+</section>
 
 <section id="value">
   <div class="section-header fade-up">
-    <span class="section-label">Core Competencies</span>
-    <h2 class="section-title">Value Architecture</h2>
+    <span class="section-label">01</span><h2 class="section-title">What I Bring</h2><div class="section-divider"></div>
   </div>
-  <div class="glass-grid">
-    <div class="glass-card fade-up">
-      <span class="card-icon">⚖</span>
-      <h3 class="card-title">Contract Lifecycle Management</h3>
-      <p class="card-text">End-to-end drafting, review, and negotiation of SaaS agreements, MSAs, NDAs, and vendor contracts, utilizing a risk allocation lens rather than a checkbox mentality.</p>
+  <div class="grid-3">
+    <div class="box-card fade-up">
+      <span class="value-icon">⚖</span>
+      <h3 class="value-title">Contract Lifecycle Management</h3>
+      <p class="value-text">End-to-end drafting, review, and negotiation of SaaS agreements, MSAs, NDAs, and vendor contracts, with a risk allocation lens rather than a checkbox mentality.</p>
     </div>
-    <div class="glass-card fade-up">
-      <span class="card-icon">🛡</span>
-      <h3 class="card-title">Data Privacy &amp; Compliance</h3>
-      <p class="card-text">DPDPA and GDPR compliance frameworks built from primary texts. Comprehensive data flow mapping, DPIAs, and vendor structuring strategies.</p>
+    <div class="box-card fade-up">
+      <span class="value-icon">🛡</span>
+      <h3 class="value-title">Data Privacy &amp; Compliance</h3>
+      <p class="value-text">DPDPA and GDPR compliance frameworks built from primary texts, not templates. Data flow mapping, DPIAs, vendor structuring. And a Gold Medal in Data Privacy to back it up.</p>
     </div>
-    <div class="glass-card fade-up">
-      <span class="card-icon">⚙</span>
-      <h3 class="card-title">Legal Automation &amp; AI</h3>
-      <p class="card-text">Designed AI-driven legal evaluation logic at LawSikho. Built and deployed a live multi-jurisdiction compliance checker independent of external APIs.</p>
+    <div class="box-card fade-up">
+      <span class="value-icon">⚙</span>
+      <h3 class="value-title">Legal Automation &amp; AI Governance</h3>
+      <p class="value-text">I don't just advise on AI. I build with it. Designed AI-driven legal evaluation logic at LawSikho. Built a live multi-jurisdiction compliance checker deployed on GitHub Pages.</p>
+    </div>
+    <div class="box-card fade-up">
+      <span class="value-icon">📖</span>
+      <h3 class="value-title">Thought Leadership</h3>
+      <p class="value-text">Published author of two books. Active LinkedIn voice on AI law and data privacy. Running the Privacipher newsletter on AI compliance. Not a passive observer of the field.</p>
+    </div>
+    <div class="box-card fade-up">
+      <span class="value-icon">🏛</span>
+      <h3 class="value-title">Academic &amp; Research Depth</h3>
+      <p class="value-text">Jean Monnet EU-ERASMUS+ researcher on non-personal data governance. Arbitrator at Vis Vienna. President Judge at Jessup Indian Prelims. Published in peer-reviewed journals.</p>
+    </div>
+    <div class="box-card fade-up">
+      <span class="value-icon">🌐</span>
+      <h3 class="value-title">Cross-Jurisdiction Fluency</h3>
+      <p class="value-text">Practical experience spanning Indian, EU, and US legal frameworks: DPDPA, GDPR, and CCPA. Not just comparative knowledge; applied to real client mandates.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tool">
+  <div class="section-header fade-up">
+    <span class="section-label">02</span><h2 class="section-title">What I've Built</h2><div class="section-divider"></div>
+  </div>
+  <div class="tool-showcase">
+    <div class="fade-up">
+      <span class="tool-tag">Live on GitHub Pages</span>
+      <h3 class="tool-name">Global Privacy Compliance Intelligence Tool</h3>
+      <p class="tool-desc">
+        A browser-based, zero-backend compliance checker covering DPDPA 2023, GDPR, and CCPA, fact-checked against official Gazette texts. Built entirely in HTML, CSS, and JavaScript. No dependency on external APIs. No login wall.
+      </p>
+      <ul class="tool-features">
+        <li>Multi-jurisdiction compliance analysis (DPDPA / GDPR / CCPA)</li>
+        <li>Enforcement timelines and obligation checklists</li>
+        <li>DPIA requirement detection with jurisdiction-specific triggers</li>
+        <li>Terms verified against primary legal texts, not secondary summaries</li>
+        <li>Deployable as a standalone file with no server required</li>
+      </ul>
+      <a href="https://advsanketshah.github.io/Privacipher/" target="_blank" rel="noopener" class="btn-primary">View Live Tool</a>
+    </div>
+    <div class="box-card fade-up" style="padding: 1rem;">
+       <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Code interface representation" style="width: 100%; border-radius: 4px; opacity: 0.8;">
     </div>
   </div>
 </section>
 
 <section id="books">
   <div class="section-header fade-up">
-    <span class="section-label">Publications</span>
-    <h2 class="section-title">Authored Works</h2>
+    <span class="section-label">03</span><h2 class="section-title">Published Works</h2><div class="section-divider"></div>
   </div>
-  <div class="glass-grid" style="grid-template-columns: 1fr;">
+  <div class="grid-2">
     <a href="https://amzn.in/d/08QqoULj" target="_blank" rel="noopener" class="book-card fade-up">
-      <div class="book-cover">Privacy Guide</div>
+      <div class="book-spine"><span class="book-spine-text">Privacy Starter Guide</span></div>
       <div>
         <p class="book-genre">Legal Reference &middot; Amazon Kindle</p>
-        <h3 class="book-title">The Privacy Lawyer's Starter Guide</h3>
-        <p class="card-text">A working guide for lawyers advising on GDPR and DPDPA in parallel. Covers regulatory landscape, substantive law, and practice directly, with twelve fully drafted instruments included.</p>
+        <h3 class="book-title">The Privacy Lawyer's Starter Guide: GDPR and India's DPDPA in Practice</h3>
+        <p class="book-desc">A working guide for lawyers advising on GDPR and DPDPA in parallel, because clients operate across jurisdictions. Covers regulatory landscape, substantive law, and practice directly, with twelve fully drafted instruments included.</p>
       </div>
     </a>
     <a href="https://amzn.in/d/0deyErKE" target="_blank" rel="noopener" class="book-card fade-up">
-      <div class="book-cover">DPDPA</div>
+      <div class="book-spine"><span class="book-spine-text">DPDPA Guide</span></div>
       <div>
         <p class="book-genre">Legal Reference &middot; Amazon Kindle</p>
-        <h3 class="book-title">Lawyer's Guide to DPDPA</h3>
-        <p class="card-text">Practical legal architecture for DPDPA 2023 compliance, written for advocates and in-house counsel who need to translate the statute into operational guidance.</p>
+        <h3 class="book-title">Lawyer's Guide to DPDPA: From Black Letter Law to Boardroom Advice</h3>
+        <p class="book-desc">Practical legal architecture for DPDPA 2023 compliance, written for advocates and in-house counsel who need to translate the statute into operational guidance without secondary-source padding.</p>
+      </div>
+    </a>
+    <a href="https://amzn.in/d/0gEye9in" target="_blank" rel="noopener" class="book-card fade-up">
+      <div class="book-spine"><span class="book-spine-text">Sunday Afternoons</span></div>
+      <div>
+        <p class="book-genre">Literary Fiction &middot; Amazon Kindle</p>
+        <h3 class="book-title">The Weight of Sunday Afternoons</h3>
+        <p class="book-desc">A quiet, Mumbai-set novel about the weight of what remains unsaid between people who've shared too much of the same ordinary time. The other half of who I am outside the law.</p>
       </div>
     </a>
   </div>
@@ -102,7 +159,6 @@
 </footer>
 
 <script>
-  function toggleMenu() { document.getElementById('nav-links').classList.toggle('open'); }
   const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
