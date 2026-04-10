@@ -592,7 +592,7 @@
         </div>
       </a>
 
-      <a href="https://amzn.in/d/0gEye9in" target="_blank" rel="noopener" class="book-card fade-up">
+      <a href="https://amzn.in/d/05X2h8LA" target="_blank" rel="noopener" class="book-card fade-up">
         <div class="book-spine-placeholder" style="background: linear-gradient(135deg, #B45309, #78350F);">
           <span class="book-spine-text">Sunday Afternoons</span>
         </div>
@@ -991,6 +991,27 @@
   const btn = document.getElementById('backToTop');
   window.addEventListener('scroll', () => {
     btn.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  function toggleMenu() {
+    const nav = document.getElementById('nav-links');
+    const ham = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    ham.classList.toggle('open');
+  }
+
+  function closeMenu() {
+    document.getElementById('nav-links').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+
+  document.addEventListener('click', (e) => {
+    const nav = document.getElementById('nav-links');
+    const ham = document.getElementById('hamburger');
+    if (!nav.contains(e.target) && !ham.contains(e.target)) {
+      nav.classList.remove('open');
+      ham.classList.remove('open');
+    }
   });
 </script>
 </body>
