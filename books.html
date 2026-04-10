@@ -28,6 +28,19 @@
   .nav-links a:hover, .nav-links a.active { color: var(--accent-primary); }
   .nav-cta { font-size: 0.875rem; font-weight: 600; color: white; background: var(--text-primary); padding: 0.6rem 1.2rem; border-radius: var(--radius-full); text-decoration: none; }
 
+  /* Mobile Menu Styles */
+  .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); cursor: pointer; z-index: 1001; padding: 0.5rem; }
+  @media (max-width: 900px) {
+    .mobile-menu-btn { display: block; }
+    .nav-cta { display: none; }
+    .nav-links { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; opacity: 0; visibility: hidden; transform: translateY(-20px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 999; margin: 0; }
+    .nav-links.active { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-links a { font-size: 1.25rem; font-weight: 600; }
+    .nav-links li.mobile-cta-wrapper { display: block; margin-top: 1rem; }
+    .nav-links li.mobile-cta-wrapper a { display: inline-block; }
+  }
+  @media (min-width: 901px) { .mobile-cta-wrapper { display: none; } }
+
   section { padding: 10rem 0 6rem; }
   .section-header { margin-bottom: 4rem; }
   .section-label { display: inline-block; font-size: 0.875rem; font-weight: 600; color: var(--accent-primary); margin-bottom: 0.5rem; }
@@ -42,7 +55,7 @@
   .book-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.3; }
   .book-description { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem; }
 
-  @media (max-width: 900px) { .books-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  @media (max-width: 900px) { .books-grid { grid-template-columns: 1fr; } }
   @media (max-width: 600px) { .book-card { flex-direction: column; } .book-spine-placeholder { width: 100%; height: 100px; border-radius: 8px; } }
 </style>
 </head>
@@ -51,6 +64,13 @@
 <nav>
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">Adv. Sanket Shah</a>
+    
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
     <ul class="nav-links">
       <li><a href="value.html">Value</a></li>
       <li><a href="privacipher.html">Privacipher</a></li>
@@ -60,7 +80,9 @@
       <li><a href="certifications.html">Certifications</a></li>
       <li><a href="education.html">Education</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
+      <li class="mobile-cta-wrapper"><a href="contact.html" class="nav-cta">Book Consultation</a></li>
     </ul>
+    
     <a href="contact.html" class="nav-cta">Book Consultation</a>
   </div>
 </nav>
@@ -120,5 +142,22 @@
   </div>
 </section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if(mobileBtn && navLinks) {
+      mobileBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        if(navLinks.classList.contains('active')) {
+          mobileBtn.innerHTML = '<svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+        } else {
+          mobileBtn.innerHTML = '<svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
