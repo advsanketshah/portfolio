@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Certifications | Adv. Sanket Shah</title>
+<meta name="description" content="Certifications in AI for Business, DPDPA, GDPR, Agentic AI, and legal technology. Issued by UPenn, Anthropic, IBM, and Securiti AI.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://advsanketshah.github.io/certifications.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://advsanketshah.github.io/certifications.html">
+<meta property="og:title" content="Certifications | Adv. Sanket Shah">
+<meta property="og:description" content="Certifications in AI for Business, DPDPA, GDPR, Agentic AI, and legal technology. Issued by UPenn, Anthropic, IBM, and Securiti AI.">
+<meta property="og:image" content="https://advsanketshah.github.io/sanket-photo.JPG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Certifications | Adv. Sanket Shah">
+<meta name="twitter:description" content="Certifications in AI for Business, DPDPA, GDPR, Agentic AI, and legal technology. Issued by UPenn, Anthropic, IBM, and Securiti AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -52,6 +63,19 @@
   .cert-issuer { font-size: 0.75rem; font-weight: 600; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
   .cert-name { font-family: var(--font-display); font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; line-height: 1.3; }
   .cert-date { font-size: 0.875rem; color: var(--text-tertiary); }
+
+  /* Dark Mode */
+  [data-theme="dark"] {
+    --bg-base: #0A0F1E; --bg-surface: #111827; --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8; --text-tertiary: #64748B; --accent-primary: #60A5FA;
+    --accent-light: #1E3A5F; --border-color: #1E293B;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3); --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+  }
+  [data-theme="dark"] nav { background: rgba(10, 15, 30, 0.9); }
+  [data-theme="dark"] .nav-links { background: rgba(10, 15, 30, 0.98); }
+  [data-theme="dark"] .theme-toggle { color: var(--text-primary); }
+
 </style>
 </head>
 <body>
@@ -74,10 +98,16 @@
       <li><a href="experience.html">Experience</a></li>
       <li><a href="certifications.html" class="active">Certifications</a></li>
       <li><a href="education.html">Education</a></li>
+      <li><a href="cases.html">Cases</a></li>
+      <li><a href="resources.html">Resources</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
       <li class="mobile-cta-wrapper"><a href="contact.html" class="nav-cta">Book Consultation</a></li>
     </ul>
     
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" style="background:none;border:none;cursor:pointer;padding:0.5rem;color:var(--text-secondary);display:flex;align-items:center;">
+      <svg id="iconSun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg id="iconMoon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
     <a href="contact.html" class="nav-cta">Book Consultation</a>
   </div>
 </nav>
@@ -170,6 +200,26 @@
       });
     }
   });
+</script>
+<script>
+  // Dark mode
+  (function() {
+    const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', saved);
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('themeToggle');
+      const sun = document.getElementById('iconSun');
+      const moon = document.getElementById('iconMoon');
+      function applyTheme(t) {
+        document.documentElement.setAttribute('data-theme', t);
+        localStorage.setItem('theme', t);
+        if (t === 'dark') { sun.style.display = 'block'; moon.style.display = 'none'; }
+        else { sun.style.display = 'none'; moon.style.display = 'block'; }
+      }
+      applyTheme(saved);
+      if(btn) btn.addEventListener('click', () => applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+    });
+  })();
 </script>
 </body>
 </html>
