@@ -62,7 +62,7 @@
 
   @media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; text-align: center; }
-    .hero-photo-wrap { max-width: 300px; margin: 0 auto; aspect-ratio: 1/1; }
+    .hero-photo-wrap { max-width: 300px; margin: 0 auto; aspect-ratio: 1/1; order: -1; }
     .stats-grid { grid-template-columns: repeat(3, 1fr); }
   }
   @media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -218,5 +218,6 @@
 </script>
 
 <script src="nav.js" defer></script>
+<script>if("serviceWorker"in navigator){navigator.serviceWorker.register("/sw.js").catch(function(){});}</script>
 </body>
 </html>
