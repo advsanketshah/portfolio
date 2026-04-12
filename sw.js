@@ -1,4 +1,4 @@
-var CACHE='ss-v1';
+var CACHE='ss-v2';
 var PAGES=[
   '/',
   '/index.html',
