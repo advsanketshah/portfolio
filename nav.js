@@ -1,27 +1,28 @@
-(function(){
-  // Desktop: dropdowns are CSS :hover — no JS needed.
-  // Mobile: hamburger toggles .menu-open on <nav>, revealing the full nav-links overlay.
-
+(function () {
   var btn = document.querySelector('.mobile-menu-btn');
-  var nav = document.querySelector('nav');
-  if (!btn || !nav) return;
+  var navEl = document.querySelector('nav');
+  if (!btn || !navEl) return;
 
-  btn.addEventListener('click', function(e){
+  // Toggle menu open/closed
+  btn.addEventListener('click', function (e) {
     e.stopPropagation();
-    nav.classList.toggle('menu-open');
+    var isOpen = navEl.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
   // Close when any nav link is tapped
-  nav.querySelectorAll('.nav-links a').forEach(function(link){
-    link.addEventListener('click', function(){
-      nav.classList.remove('menu-open');
+  navEl.querySelectorAll('.nav-links a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navEl.classList.remove('menu-open');
+      btn.setAttribute('aria-expanded', 'false');
     });
   });
 
-  // Close on tap outside the nav
-  document.addEventListener('click', function(e){
-    if (!nav.contains(e.target)) {
-      nav.classList.remove('menu-open');
+  // Close on tap outside
+  document.addEventListener('click', function (e) {
+    if (!navEl.contains(e.target)) {
+      navEl.classList.remove('menu-open');
+      btn.setAttribute('aria-expanded', 'false');
     }
   });
 })();
