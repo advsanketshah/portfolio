@@ -498,32 +498,6 @@
   }
 
   // Mobile nav
-  document.addEventListener('DOMContentLoaded', () => {
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks  = document.querySelector('.nav-links');
-    const CLOSE_ICON = '<svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
-    const OPEN_ICON  = '<svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
-    document.querySelectorAll('.has-dropdown .dropdown-toggle').forEach(btn => {
-      btn.addEventListener('click', e => {
-        if (window.innerWidth <= 900) {
-          e.stopPropagation();
-          btn.closest('.has-dropdown').classList.toggle('open');
-        }
-      });
-    });
-    if (mobileBtn && navLinks) {
-      mobileBtn.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('active');
-        mobileBtn.innerHTML = isOpen ? CLOSE_ICON : OPEN_ICON;
-      });
-      document.addEventListener('click', e => {
-        if (!e.target.closest('nav') && navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-          mobileBtn.innerHTML = OPEN_ICON;
-        }
-      });
-    }
-  });
 </script>
 <script src="nav.js" defer></script>
 <script>if("serviceWorker"in navigator){navigator.serviceWorker.register("/sw.js").catch(function(){});}</script>
