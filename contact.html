@@ -150,6 +150,8 @@
 
 </style>
 <link rel="stylesheet" href="nav.css">
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -276,6 +278,10 @@
         <div class="intake-field">
           <label for="f-name">Your name</label>
           <input type="text" id="f-name" placeholder="First name or full name">
+        </div>
+        <div class="intake-field">
+          <label for="f-email">Your email <span style="color:var(--text-tertiary);font-weight:400;">(so I can reply directly)</span></label>
+          <input type="email" id="f-email" placeholder="you@company.com">
         </div>
         <div class="intake-field">
           <label for="f-company">Company or role</label>
@@ -409,7 +415,16 @@
   // ============================================================
   const ANTHROPIC_API_KEY = 'YOUR_API_KEY_HERE';
 
-  const answers = { need:'', context:'', urgency:'', name:'', company:'', jurisdiction:'' };
+  // ============================================================
+  // EmailJS — replace these three values after signup at emailjs.com
+  // ============================================================
+  const EMAILJS_PUBLIC_KEY  = 'wIm6wlyhGDfOFkw4T';
+  const EMAILJS_SERVICE_ID  = 'service_wugaq9m';            // Email Services > your service ID
+  const EMAILJS_TEMPLATE_ID = 'template_0dtc60i';
+
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+
+  const answers = { need:'', context:'', urgency:'', name:'', email:'', company:'', jurisdiction:'' };
 
   function selectOption(el, field, value) {
     el.closest('.option-grid').querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
@@ -439,6 +454,7 @@
     answers.context = document.getElementById('f-context').value;
     answers.urgency = document.getElementById('f-urgency').value;
     answers.name = document.getElementById('f-name').value;
+    answers.email = document.getElementById('f-email').value;
     answers.company = document.getElementById('f-company').value;
     answers.jurisdiction = document.getElementById('f-jurisdiction').value;
     document.getElementById('summary-need').textContent = answers.need || 'Not specified';
@@ -477,6 +493,21 @@
     return `${base}\n\n${jur}\n\nIf this matches what you had in mind, the next step is a short call. Book one via Calendly or drop me a WhatsApp and we can figure out the right approach from there.`;
   }
 
+  function sendLeadEmail(briefText) {
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      from_name:    answers.name        || 'Not provided',
+      from_email:   answers.email       || '',
+      from_company: answers.company     || 'Not provided',
+      need:         answers.need        || 'Not specified',
+      urgency:      answers.urgency     || 'Not specified',
+      jurisdiction: answers.jurisdiction|| 'Not specified',
+      context:      answers.context     || 'Not provided',
+      brief:        briefText
+    }).catch(function(err) {
+      console.warn('EmailJS send failed:', err);
+    });
+  }
+
   function showResult(text) {
     document.getElementById('thinking').classList.remove('active');
     document.getElementById('result-text').textContent = text;
@@ -484,11 +515,12 @@
     document.getElementById('result-ctas').style.display = 'block';
     const r = document.querySelector('.intake-result');
     if (r) window.scrollTo({ top: r.offsetTop - 120, behavior: 'smooth' });
+    sendLeadEmail(text);
   }
 
   function resetForm() {
     Object.keys(answers).forEach(k => answers[k] = '');
-    ['f-context','f-name','f-company'].forEach(id => { const el = document.getElementById(id); if(el) el.value = ''; });
+    ['f-context','f-name','f-email','f-company'].forEach(id => { const el = document.getElementById(id); if(el) el.value = ''; });
     ['f-urgency','f-jurisdiction'].forEach(id => { const el = document.getElementById(id); if(el) el.value = ''; });
     document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
     document.getElementById('result').classList.remove('active');
